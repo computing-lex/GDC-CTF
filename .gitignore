@@ -13,3 +13,6 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# in case anybody wants to have git right in godot
+/addons/godot-git-plugin/
