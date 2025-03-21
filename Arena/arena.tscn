@@ -1,10 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://4n06h35d6h7t"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_5oele"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5oele"]
 
 [node name="Arena" type="Node2D"]
 
-[node name="Ground" type="MeshInstance2D" parent="."]
-position = Vector2(605, 335)
-scale = Vector2(1242.5, 699.5)
-mesh = SubResource("QuadMesh_5oele")
+[node name="Playfield" type="Sprite2D" parent="."]
+scale = Vector2(800, 500)
+texture = SubResource("PlaceholderTexture2D_5oele")
