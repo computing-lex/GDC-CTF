@@ -1,4 +1,4 @@
-extends Node
+extends CharacterBody2D
 class_name generic_agent
 
 # generic agent attributes as required
@@ -16,6 +16,7 @@ class_name generic_agent
 # abstract functions are not supported by GDscript
 # override this in oter agents
 func tick():
+	printerr("UNIMPLEMENTED!!!!")
 	pass
 
 # helpful generic functions
@@ -37,4 +38,5 @@ func set_strength(new_strength: int):
 		strength = new_strength
 
 func get_strength():
+
 	return strength

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4x4aobecq5nx"]
+
+[ext_resource type="Script" uid="uid://tp6g67sj0uw8" path="res://Home Base/Scripts/home_base.gd" id="1_1xl2f"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_02wv6"]
+size = Vector2(100, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paok8"]
+size = Vector2(100, 100)
+
+[node name="HomeBase" type="Area2D"]
+script = ExtResource("1_1xl2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_02wv6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_paok8")
