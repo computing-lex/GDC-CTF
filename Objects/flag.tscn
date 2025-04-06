@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dto61i6ve6nfv"]
+
+[ext_resource type="Texture2D" uid="uid://dx2cesihotwct" path="res://Objects/Flag/Textures/Flag.png" id="1_gq36a"]
+[ext_resource type="Shader" uid="uid://x8253p3layod" path="res://Objects/Flag/flag.gdshader" id="1_vr4p2"]
+[ext_resource type="Script" uid="uid://bxe3xinkug2ks" path="res://Objects/flag.gd" id="1_xuy75"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xuy75"]
+resource_local_to_scene = true
+shader = ExtResource("1_vr4p2")
+shader_parameter/team_color = Vector4(0, 0, 0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vr4p2"]
+size = Vector2(16, 21)
+
+[node name="Flag" type="Area2D"]
+script = ExtResource("1_xuy75")
+
+[node name="FlagSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_xuy75")
+position = Vector2(5, -6)
+texture = ExtResource("1_gq36a")
+
+[node name="FlagCollider" type="CollisionShape2D" parent="."]
+position = Vector2(5, -0.5)
+shape = SubResource("RectangleShape2D_vr4p2")

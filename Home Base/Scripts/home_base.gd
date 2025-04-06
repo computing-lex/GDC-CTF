@@ -17,7 +17,7 @@ func deploy_team():
 	for agent in team:
 		if agent.time_delay >= release_timer.wait_time:
 			agent.release_agent()
-			print("Agent releaseed!")
+			print("Agent released!")
 
 func on_flag_captured():
 	flag_captured.emit()
