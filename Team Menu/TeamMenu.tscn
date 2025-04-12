@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://csiik3d8y1m3p"]
+
+[ext_resource type="PackedScene" uid="uid://ch3b6vdjq3fjn" path="res://Team Menu/agent_menu.tscn" id="1_pqwoo"]
+
+[sub_resource type="Theme" id="Theme_ftug5"]
+default_font_size = 16
+
+[node name="TeamMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_ftug5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="PanelContainer" parent="MarginContainer/ScrollContainer/HBoxContainer" instance=ExtResource("1_pqwoo")]
+layout_mode = 2
