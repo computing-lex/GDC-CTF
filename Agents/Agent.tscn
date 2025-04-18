@@ -10,6 +10,10 @@ radius = 77.75
 
 [node name="Agent" type="CharacterBody2D"]
 script = ExtResource("1_d7vyf")
+type = null
+speed = null
+strength = null
+time_delay = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_d7vyf")

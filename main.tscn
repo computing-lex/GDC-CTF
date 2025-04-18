@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba3hdpllwoatp"]
+
+[ext_resource type="PackedScene" uid="uid://4n06h35d6h7t" path="res://Arena/arena.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c4x4aobecq5nx" path="res://Home Base/home_base.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dto61i6ve6nfv" path="res://Objects/flag.tscn" id="3_h2yge"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Arena" parent="." instance=ExtResource("1_0xm2m")]
+
+[node name="RedBase" parent="." node_paths=PackedStringArray("team", "release_timer") instance=ExtResource("2_h2yge")]
+position = Vector2(321, -177)
+team = [null]
+release_timer = NodePath("../ReleaseTimer")
+
+[node name="RedFlag" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(270, -135)
+scale = Vector2(2, 2)
+is_red = true
+
+[node name="BlueBase" parent="." node_paths=PackedStringArray("release_timer") instance=ExtResource("2_h2yge")]
+position = Vector2(-321, 169)
+is_red = false
+release_timer = NodePath("../ReleaseTimer")
+
+[node name="BlueFlag" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(-274, 122)
+scale = Vector2(2, 2)
+
+[node name="ReleaseTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
