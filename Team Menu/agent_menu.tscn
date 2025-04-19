@@ -1,9 +1,17 @@
-[gd_scene format=3 uid="uid://ch3b6vdjq3fjn"]
+[gd_scene load_steps=2 format=3 uid="uid://ch3b6vdjq3fjn"]
 
-[node name="PanelContainer" type="PanelContainer"]
+[ext_resource type="Script" uid="uid://behoh85rtewtv" path="res://Team Menu/agent_menu.gd" id="1_u1a7i"]
+
+[node name="AgentMenu" type="PanelContainer" node_paths=PackedStringArray("nameControl", "typeControl", "movementControl", "speedControl", "delayControl")]
 clip_contents = true
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource("1_u1a7i")
+nameControl = NodePath("MarginContainer/VBoxContainer/name")
+typeControl = NodePath("MarginContainer/VBoxContainer/type")
+movementControl = NodePath("MarginContainer/VBoxContainer/movement")
+speedControl = NodePath("MarginContainer/VBoxContainer/Panel/MarginContainer/HBoxContainer/speed and strength")
+delayControl = NodePath("MarginContainer/VBoxContainer/Panel2/MarginContainer/HBoxContainer/delay")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
